@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <form action="sendEmailWithAttachment.jsp" method="POST" enctype = "multipart/form-data">
+         From Email ID: <input type="text" name="fromEmailId">
+         <br/>
+         To Email ID: <input type="text" name="toEmailId">
+         <br/>
+         CC Email ID: <input type="text" name="ccEmailId">
+         <br/>
+         BCC Email ID: <input type="text" name="bccEmailId">
+         <br/>
+         Email Subject: <input type="text" name="emailSubject">
+         <br/>
+         Email Body: <textarea name="emailBody" rows="5" cols="100"></textarea>
+         <br/>
+         Select a file to upload:
+         <input type = "file" name = "attachment" size = "50" />
+         <br/>
+         <input type="submit" value="Submit" />
+      </form>
+   </body>
+</html>

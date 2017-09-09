@@ -1,0 +1,14 @@
+
+https://www.tutorialspoint.com/jsp/jsp_writing_filters.htm
+
+There are various types of filters suggested by the specifications −
+
+Authentication Filters
+Data compression Filters
+Encryption Filters
+Filters that trigger resource access events
+Image Conversion Filters
+Logging and Auditing Filters
+MIME-TYPE Chain Filters
+Tokenizing Filters
+XSL/T Filters That Transform XML Content

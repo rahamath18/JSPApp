@@ -1,0 +1,29 @@
+<taglib>
+   <tlib-version>1.0</tlib-version>
+   <jsp-version>2.0</jsp-version>
+   <short-name>Example TLD</short-name>
+   
+   <tag>
+      <name>Hello</name>
+      <tag-class>com.test.jsp.HelloTagHandler</tag-class>
+      <body-content>empty</body-content>
+   </tag>
+   
+   <tag>
+      <name>HelloAttr</name>
+      <tag-class>com.test.jsp.HelloAttrTagHandler</tag-class>
+      <body-content>scriptless</body-content>
+      <attribute>
+         <name>message</name>
+         <required>true</required>
+         <type>java.lang.String</type>
+      </attribute>
+   </tag>
+   
+   <tag>
+      <name>Today</name>
+      <tag-class>com.test.jsp.DateTagHandler</tag-class>
+      <body-content>empty</body-content>
+   </tag>
+   
+</taglib>

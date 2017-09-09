@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>JSPApp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+	<context-param> 
+	   <description>Location to store uploaded file</description> 
+	   <param-name>file-upload</param-name> 
+	   <param-value>
+	      /Users/rahamathullahrahamathullah/Documents/workspace/JSPApp/WebContent/fileupload/
+	   </param-value> 
+	</context-param>
+
+	<servlet>
+	  	<servlet-name>LoginServlet</servlet-name>
+	  	<servlet-class>com.test.jsp.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+	  	<servlet-name>LoginServlet</servlet-name>
+	  	<url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+  
+    <!-- JSP files also configures as servlet in web.xml -->
+    <servlet>  
+		<servlet-name>jspImplicitObjects-Config</servlet-name>  
+		<jsp-file>/jspImplicitObjects-Config.jsp</jsp-file>  
+		<init-param>  
+		<param-name>driver</param-name>  
+		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>  
+		</init-param>
+	  	<init-param>  
+			<param-name>user-name</param-name>  
+			<param-value>root</param-value>  
+		</init-param>
+	  	<init-param>  
+			<param-name>password</param-name>  
+			<param-value>password</param-value>  
+		</init-param>
+	</servlet>
+	<servlet-mapping>  
+		<servlet-name>jspImplicitObjects-Config</servlet-name>  
+		<url-pattern>/jspImplicitObjects-Config.jsp</url-pattern>  
+	</servlet-mapping>  
+	
+	<servlet>  
+		<servlet-name>loginSuccess</servlet-name>  
+		<jsp-file>/loginSuccess.jsp</jsp-file>  
+	</servlet>
+	<servlet-mapping>  
+		<servlet-name>loginSuccess</servlet-name>  
+		<url-pattern>/loginSuccess.jsp</url-pattern>  
+	</servlet-mapping>
+	
+	<servlet>  
+		<servlet-name>loginFailed</servlet-name>  
+		<jsp-file>/loginFailed.jsp</jsp-file>  
+	</servlet>
+	<servlet-mapping>  
+		<servlet-name>loginFailed</servlet-name>  
+		<url-pattern>/loginFailed.jsp</url-pattern>  
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>LogFilterServlet</filter-name>
+		<filter-class>com.test.jsp.LogFilterServlet</filter-class>
+		<init-param>
+	      <param-name>test-param</param-name>
+	      <param-value>Initialization Paramter</param-value>
+	    </init-param>
+	</filter>
+  	<filter-mapping>
+  		<filter-name>LogFilterServlet</filter-name>
+  		<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+  	
+  	<filter>
+		<filter-name>AuthenticationFilterServlet</filter-name>
+		<filter-class>com.test.jsp.AuthenticationFilterServlet</filter-class>
+		<init-param>
+	      <param-name>test-param</param-name>
+	      <param-value>Initialization Paramter</param-value>
+	    </init-param>
+	</filter>
+  	<filter-mapping>
+  		<filter-name>AuthenticationFilterServlet</filter-name>
+  		<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+</web-app>

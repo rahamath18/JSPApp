@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>File Uploading Form</title>
+   </head>
+   
+   <body>
+   
+      <h3>File Upload:</h3>
+      
+      Select a file to upload: <br />  <br /> 
+      
+      <form action = "uploadFile.jsp" method = "post" enctype = "multipart/form-data">
+         
+                  From Email ID: <input type="text" name="fromEmailId">
+         
+         
+         <input type = "file" name = "file1" size = "50" />
+         <br /> <br />
+         <input type = "file" name = "file2" size = "50" />
+         <br /> <br />
+         <input type = "file" name = "file3" size = "50" />
+         <br /> <br />
+         
+         <input type = "submit" value = "Upload File" />
+         
+      </form>
+      
+   </body>
+   
+</html>
